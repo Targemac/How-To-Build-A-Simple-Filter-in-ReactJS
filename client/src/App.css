@@ -1,0 +1,103 @@
+:root {
+  --lightGrey: #c2c2c2;
+  --darkGrey: #5b5b5b;
+  --purpleDark: #8d2dc1;
+  --purpleDarker: #6e2297;
+  --whiteType1: #fff;
+  --fontSizeType1: 16px;
+  --fontFamilyType1: "Segoe UI";
+  --fontweightTypeBold: 700;
+  --fontweightTypeLight: 500;
+  --fontweightTypeLighter: 400;
+  --borderType1: 0.5px solid var(--lightGrey);
+  --borderPurpleType1: 0.5px solid var(--purpleDark);
+  --borderPurpleType2: 0.5px solid var(--purpleDarker);
+  --borderRadiusType1: 10px;
+  --borderRadiusType2: 5px;
+  --borderRadiusType3: 25px;
+}
+
+.App {
+  display: grid;
+  place-content: center;
+  place-items: center;
+  height: 100vh;
+}
+
+* {
+  font-family: var(--fontFamilyType1);
+}
+
+.filter_wrapper {
+  border: 0.5px solid var(--lightGrey);
+  border-radius: var(--borderRadiusType1);
+  padding: 1rem;
+  min-width: 300px;
+}
+
+.heading {
+  margin: 0;
+  font-size: 1.3em;
+  color: var(--darkGrey);
+  font-weight: var(--fontweightTypeLight);
+  border-bottom: 0.5px solid var(--lightGrey);
+padding-bottom: .5rem;
+}
+
+.filter_form {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.input_group {
+  display: grid;
+}
+
+.input_group input,
+.input_group select {
+  border: var(--borderType1);
+  border-radius: var(--borderRadiusType2);
+  padding: 8px 12px;
+  font-size: var(--fontSizeType1);
+  color: var(--darkGrey);
+  font-weight: var(--fontweightTypeLighter);
+  outline: none;
+}
+
+.input_group input:hover,
+.input_group select:hover {
+  border: var(--borderPurpleType1);
+}
+
+.input_group input:focus,
+.input_group select:focus {
+  border: var(--borderPurpleType2);
+}
+
+.input_group input::placeholder,
+.input_group select {
+  color: var(--darkGrey);
+  font-weight: var(--fontweightTypeLighter);
+}
+
+.input_label {
+  color: var(--darkGrey);
+  margin-bottom: 0.5rem;
+}
+
+.form_button {
+  border: none;
+  cursor: pointer;
+  justify-self: flex-start;
+  margin-top: 1rem;
+  border-radius: var(--borderRadiusType3) !important;
+  background: var(--purpleDark);
+  color: var(--whiteType1) !important;
+  font-weight: var(--fontweightTypeLight) !important;
+  transition: all 0.3s ease-in-out;
+  /* padding: 6px 24px !important; */
+}
+.form_button:hover {
+  background: var(--purpleDarker);
+}
